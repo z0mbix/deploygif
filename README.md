@@ -1,7 +1,7 @@
 Get gifs when you deploy
 ========================
 
-This is the application code for [deploygif.com](deploygif.com)
+This is the application code for [deploygif.com](http://deploygif.com)
 
 ## Description
 
