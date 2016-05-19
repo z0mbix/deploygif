@@ -16,7 +16,6 @@ red:set_timeout(1000) -- 1 sec
 -- TODO: How to load settings from a config file?
 local ok, err = red:connect("127.0.0.1", 6379)
 if not ok then
-    #ngx.redirect("/sorry", 302)
     ngx.status = 503
     ngx.say("I'm terribly sorry, I messed something up :(")
     ngx.exit(ngx.OK)
