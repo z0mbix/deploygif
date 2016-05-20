@@ -1,0 +1,14 @@
+/* MAIN */
+        Chief Gumbo: David Wooldridge
+        Contact: zombie [at] zombix.org
+        Twitter: @z0mbix
+        From: London, United Kingdom
+
+        Front-end Web Development: Louise Wooldridge
+        Contact: loulou [at] zombix.org
+        Twitter: @l0ubix
+        From: London, United Kingdom
+
+/* SITE */
+        IDE: vim
+        Server: OpenResty, lua, Terraform, Chef

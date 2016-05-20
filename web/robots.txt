@@ -1,0 +1,3 @@
+# Not sure this site is even worth crawling
+User-agent: *
+Allow: /
