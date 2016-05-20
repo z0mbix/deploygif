@@ -1,7 +1,7 @@
 -- This is the regex match ($1) from the location regex (success|fail)
 local route = ngx.var[1]
 -- This is the regex match ($2) from the location regex (/|.json)
-local dot_json = ngx.var[2]
+local match_group2 = ngx.var[2]
 local redirect = ngx.var.arg_redirect
 local json = ngx.var.arg_json
 local cjson = require "cjson"
@@ -23,6 +23,22 @@ end
 
 local res, err = red:srandmember(route)
 
+-- Did the request end with .json?
+if match_group2 == '.json' then
+    json = '1'
+end
+
+-- Did the request end with .gif?
+if match_group2 == '.gif' then
+    redirect = '1'
+end
+
+-- Did the request ask for json?
+if accept_header == 'application/json' then
+    json = '1'
+end
+
+-- Did I do something stupid?
 if not res then
     ngx.say("Failed to find you a gif: ", err)
     return
@@ -32,16 +48,6 @@ end
 if res == ngx.null then
     ngx.say("Sorry, no gifs found.")
     return
-end
-
--- Did the request end with .json?
-if dot_json == '.json' then
-    json = '1'
-end
-
--- Did the request ask for json?
-if accept_header == 'application/json' then
-    json = '1'
 end
 
 -- Put it into the connection pool of size 100,
