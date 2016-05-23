@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# SADD does not add duplicates, which is nice..
+#
+
+[[ $TRACE ]] && set -x
+set -eu
+
+db_cmd="redis-cli"
+
+for file in migrations/*; do
+  migration=${file#*/}
+  latest_migration=$($db_cmd HGET migrations latest)
+  if [[ $migration -gt $latest_migration ]]; then
+    echo "Running migration: $migration"
+    cat $file | $db_cmd
+    date=$(date '+%Y%m%H%M')
+    $db_cmd HSET migrations $migration $date
+    $db_cmd HSET migrations latest $migration
+  else
+    echo "Already migrated $migration"
+  fi
+done
