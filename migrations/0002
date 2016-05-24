@@ -1,0 +1,11 @@
+MULTI
+SADD fail http://i.giphy.com/FuV9D6v88dmo0.gif
+SADD fail http://i.giphy.com/1xeVd1vr43nHO.gif
+SADD fail http://i.giphy.com/qxjUGHKkMpvfG.gif
+SADD fail http://i.giphy.com/mPW9NepGQn0uQ.gif
+SADD fail http://i.giphy.com/wDgw1fJF8hzMY.gif
+SADD fail http://i.giphy.com/xTiTnlWmMuH2tlu5BS.gif
+SADD fail http://i.giphy.com/7CvzHW7inDNew.gif
+SADD fail http://i.giphy.com/13f6MQxAmB8lAA.gif
+SADD fail http://i.giphy.com/4DGhxRFSeZQSA.gif
+EXEC
