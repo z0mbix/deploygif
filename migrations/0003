@@ -1,0 +1,12 @@
+MULTI
+SADD success http://replygif.net/i/498.gif
+SADD success https://cdn.meme.am/instances/400x/51291486.jpg
+SADD fail http://66.media.tumblr.com/7f94de2ed3b590dbf59d501041699d94/tumblr_inline_n67m5fYC3X1raprkq.gif
+SADD fail http://66.media.tumblr.com/6ae3cb32c6ec7b5464f42693c350da0d/tumblr_inline_o5svqleg7s1raprkq_500.gif
+SADD fail http://i.giphy.com/13XbH8cjI9tr2M.gif
+SADD fail http://i.giphy.com/1LojrZ1Biy9Qk.gif
+SADD fail http://i.giphy.com/smGZxSeFZLvAk.gif
+SADD fail http://i.imgur.com/S4hTFRz.jpg
+SADD fail https://cdn.meme.am/instances/22605665.jpg
+SADD fail http://image.slidesharecdn.com/devopsdayemcworld2015-memes-final-150501164657-conversion-gate02/95/devops-memes-emcworld-2015-2-638.jpg
+EXEC
